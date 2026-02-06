@@ -134,3 +134,168 @@
 // }
 // console.log(div(14,2));
 
+
+//This keyword
+// console.log(this);
+
+// function hello(){
+//     console.log("Hey whatsapp");
+//     console.log(this);
+// }
+// hello();
+
+//===OBJECT===//
+// an object is a collection of key value pairs used to represent real world entities.
+
+// const user={
+//     name:"Abhishek",
+//     role:"Trainer",
+//     experience:13
+// };
+
+//keys->properties
+//Values->data pr fn(methods)
+
+// const user={
+//     name:"Abhishek",
+//     role:"Trainer",
+//     experience:13
+// };
+// user={
+//     name:"Abhi",
+//     role:"Dev"
+// };
+
+//problem in this  :  TypeError: Assignment to constant variable.
+
+//Issues with objects
+// ->no strict type safety
+//->
+//ex
+// let a={x:10};
+// let b=a;
+// b.x=20;
+// console.log(a.x);    //20
+  
+
+//class Syntax(major ES6 enhancement)
+// class User{
+//     constructor(name){
+//         this.name=name;
+//     }
+// }
+
+
+// const obj1={
+//     name:"Vishal",
+//     obj2:{name:"Abhi",age:45}
+// };
+// console.log((obj1.obj2).age);
+
+
+// let book={
+//     title:"The Great"
+// };
+// console.log(book.title);
+// let book2=book;
+// book.title="JS Book";
+
+// console.log(book.title);
+// console.log(book2.title);
+
+// create object with class
+// class Book{
+//     constructor(title){
+//         this.title=title;
+//     }
+// }
+// let  book3=new Book("Rich");
+
+// // acess objet7c property
+// console.log(book3.title);
+
+// let x=20;
+// let y=x;
+// y=30;
+// console.log(x);
+// console.log(y);
+
+
+
+// //shallow copy concepts
+// let x=[1,2,3];
+// let y=x;
+// y[0]=10;
+// console.log(x[0]);
+
+
+
+
+// class person{
+//     constructor(name,age){
+//         this.name=name;
+//         this.age=age;
+//     }
+// }
+// let p1=new person("Vishal",20);
+// console.log(p1);                          
+// let p2=new person("Sachin",30);
+// console.log(p2);
+// console.log(p1==p2);    //it is false that means it is deep coy
+
+
+
+
+// function test(){
+//     console.log("Hey");
+//     console.log(this);
+// }
+// test();
+
+
+
+// let person={
+//     name:"John",
+//     greet:function(){
+//         console.log(`Hello, my name  is ${this.name}`);
+//         console.log(this);
+//         let innerGreet=()=>{
+//             console.log("Hello from inner greet "+this.name);
+//             console.log(this);
+//         }
+//         innerGreet();
+//     }
+// };
+// person.greet();
+
+
+
+
+
+// class person{
+//     constructor(name,age){
+//         this.name=name;
+//         this.age=age;
+//     }
+
+// greet(){
+//     console.log(`Hello my name is ${this.name} and i am ${this.age} years old`);
+//     console.log(this);
+//     function innerGreet(){
+//         console.log("Inner great my name is "+this.name,"and i am",this.age,"years old.");
+//     }
+//     innerGreet.call(this);
+// }
+// }
+
+
+
+
+// destructuring
+
+// let arr=[1,2,3];
+// // let[a,b,c]=arr;
+// // console.log(`${a} ${b} ${c}`);
+
+// let[a, , , , b]=arr;
+// console.log(`${a} ${b}`);

@@ -21,5 +21,12 @@ npm create vite@latest  (lighter and faster)
 
 
 
-//reacts works on a component programming(eigher functional or class component)
+//reacts works on a component programming(eigher functional or class component)   to make reusable and less complex
 //component name always start with capital letter
+
+
+to make react app
+npm create vite@latest
+
+//===props use===//
+1 component se dusre component me data bhejne ke liye and even in the same component;

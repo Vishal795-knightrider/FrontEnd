@@ -153,3 +153,5 @@ let num2 = 8;
 
 console.log(num1 >> 3);     // 0        5/2^2 
 console.log(num2 >> 2);     // 2        8/2^2
+
+
