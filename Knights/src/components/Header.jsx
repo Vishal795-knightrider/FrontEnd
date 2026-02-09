@@ -1,10 +1,15 @@
 import "./Header.css"
-export default function Header({title})
+export default function Header({card})
 {
     return(
         <div>
 
-        <h1>{title}</h1>
+        {/* <h1>{title}</h1>
+        <h1>{color}</h1>
+        <h2>{year}</h2> */}
+
+        {card}
+
         <header>
         <nav className="nav">
             <a href="#">Home </a>

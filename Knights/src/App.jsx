@@ -10,8 +10,15 @@ export default function App() {                //This fn is a type of javascript
   const c={name:"KIET",location:"Ghaziabad",estdyear:1998};
   return (
     <div>
-        <Header title="I am a Knight Rider"/>
-        <Header title="Who rides in the Knight"/>     
+        <Header title="I am a Knight Rider" color="Red" year="2026"/>
+        <Header title="Who rides in the Night"/>
+
+        <card>                                                        
+          <h4>This is Childrren Demo</h4>
+          <p>This Demo talks about passing Children</p>              
+          <p>Thanks for reading</p>
+        </card>     
+
         <Registeration />   
         <Footer year={y} company={c}/>
         <Main /> 
