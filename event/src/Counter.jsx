@@ -5,7 +5,7 @@ export default function Counter()
 
     function handleIncrement(){
         setCount(count=>count+1);    //cnt ki state change krni hai
-        console.log(count);
+        // console.log(count);
     }
     function handleDecrement(){
         if(count===0){
@@ -13,7 +13,7 @@ export default function Counter()
             return;
         }
         setCount(count=>count-1);
-        console.log(count);
+        // console.log(count);
     }
     return(
         <>
@@ -24,3 +24,49 @@ export default function Counter()
         </>
     );
 }
+
+// 🧠 Simple Meaning
+
+// State change karna =
+// 👉 React ko bolna ki data ki value update karo
+
+// Example:
+
+// setCount(5);
+
+
+// Matlab:
+
+// “React, count ki value 5 kar do.”
+
+// ❌ Direct UI change nahi karte
+
+// Plain JS me tum aise karte the:
+
+// document.getElementById("count").innerText = 5;
+
+
+// Yaha tum directly UI change kar rahe ho.
+
+// ✅ React me kya karte ho?
+// setCount(5);
+
+
+// Yaha tum:
+
+// UI ko touch nahi kar rahe
+
+// Sirf data (state) change kar rahe ho
+
+// React khud:
+
+// Nayi value leta hai
+
+// Component dobara run karta hai
+
+// UI update kar deta hai
+
+// 🔄 Flow samjho
+
+//----------State change → component dobara run
+//----------Aur state update async hone ki wajah se old value print hoti hai

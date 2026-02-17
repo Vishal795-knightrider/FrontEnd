@@ -7,8 +7,8 @@ function App() {
   return (
     <>
 
-    <EventToDo/>
-    {/* <Counter /> */}
+    {/* <EventToDo/> */}
+    <Counter />
 
     </>
   )

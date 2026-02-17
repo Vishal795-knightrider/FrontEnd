@@ -100,7 +100,7 @@ const[tasks,setTasks]=useState([]);
           type="text"
           placeholder="Enter Task"
           value={task}
-          onChange={(e) => setTask(e.target.value)}  
+          onChange={(e) => setTask(e.target.value)}    //Tum directly new value de rahe ho task ko //Yaha old value use nahi karni → isliye functional form ki zarurat nahi
         />
         <button type="submit">Add Task</button>
       </form>
@@ -109,12 +109,7 @@ const[tasks,setTasks]=useState([]);
         {tasks.map((item, index) => (
           <li key={index}>
             <span>{item}</span>
-            <button
-              className="deleteBtn"
-              onClick={() => handleDelete(index)}
-            >
-              Delete
-            </button>
+            <button className="deleteBtn" onClick={() => handleDelete(index)}>Delete</button>
           </li>
         ))}
       </ul>
