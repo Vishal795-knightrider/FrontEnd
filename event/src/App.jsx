@@ -1,6 +1,7 @@
 import './App.css'
 import EventToDo from './EventToDo'
 import Counter from './Counter'
+import Search from './Search'
 
 function App() {
 
@@ -8,7 +9,8 @@ function App() {
     <>
 
     {/* <EventToDo/> */}
-    <Counter />
+    {/* <Counter /> */}
+    <Search/>
 
     </>
   )
