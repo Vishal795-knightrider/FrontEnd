@@ -1,8 +1,25 @@
-export default function Cart({totalCost}){
+export default function Cart({cartItems,totalCost,removeFromCart}){
+
     return(
-        <footer>
-            <h2 className="ok">Your Cart: </h2>
-            <h3 className="ok">total cart Amount:{totalCost}</h3>
-        </footer>
+        <div className="cart">
+            <h2>Your Cart</h2>
+
+            {cartItems.length === 0 ? (
+                <p className="empty">Cart is Empty</p>
+            ) : (
+                cartItems.map((item,index)=>(
+                    <div key={index} className="cart-item">
+                        <span>{item.name} - ₹{item.price}</span>
+                        <button 
+                          className="remove-btn"
+                          onClick={()=>removeFromCart(index)}>
+                          Remove
+                        </button>
+                    </div>
+                ))
+            )}
+
+            <h3 className="total">Total Amount: ₹{totalCost}</h3>
+        </div>
     );
 }

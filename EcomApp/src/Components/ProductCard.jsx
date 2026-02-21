@@ -1,7 +1,7 @@
 export default function ProductCard({product,addToCart})
 {
     return(
-        <div>
+        <div className="container">
             <img src={product.image} alt={product.name} />
             <h4>{product.name}</h4>
             <p>{product.price}</p>
