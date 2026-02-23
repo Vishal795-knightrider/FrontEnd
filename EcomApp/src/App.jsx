@@ -5,8 +5,10 @@ import ProductList from './Components/ProductList';
 import Cart from './Components/Cart';
 
 
+
 export default function App() {
 
+  const [searchTerm, setSearchTerm] = useState("");
   const [cart,setCart]=useState([]);
   const [totalAmt,setAmt]=useState(0);
   const product=[
@@ -32,25 +34,44 @@ export default function App() {
     }
   ]
 
-  function addToCart(product){   //is product me 1 product aayega
+  function addToCart(product){   //is product me 1 product aayega jo tum add karoge
     setCart([...cart,product]);
     setAmt(totalAmt+product.price);
   }
 
   function removeFromCart(index){
     const removedItem = cart[index];
-    const updatedCart = cart.filter((_,i)=> i !== index);
+    const updatedCart = cart.filter((_,i)=> i !== index);       //Sirf un elements ko rakhta hai jinka index match nahi karta
 
     setCart(updatedCart);
     setAmt(totalAmt - removedItem.price);
   }
 
+  const filterProducts = product.filter((item) =>
+  item.name.toLowerCase().includes(searchTerm.toLowerCase())
+);
+
   // const totalAmount=cart.reduce((total,index)=>(total+index.price,0));
   return (
     <>
-    <Header cartCount={cart.length}/>
-    <ProductList products={product} addToCart={addToCart}/>
+    <Header cartCount={cart.length} searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>
+    <ProductList products={filterProducts} addToCart={addToCart}/>  
     <Cart totalCost={totalAmt} cartItems={cart} removeFromCart={removeFromCart}/>
     </>
   )
 }
+
+
+
+
+
+
+
+
+// export default function App(){
+//   useEffect(()=>{console.log("Welcome")},[])
+
+//   return(
+//     <h1>My App</h1>
+//   )
+// }
