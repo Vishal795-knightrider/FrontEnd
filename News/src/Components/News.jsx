@@ -11,7 +11,7 @@ export default function News() {
     setLoading(true);
 
     fetch(
-      "https://newsapi.org/v2/everything?q=tesla&from=2026-02-20&sortBy=publishedAt&apiKey=4adb99b0db754b89af23f7d156d4afee"
+      "https://newsapi.org/v2/everything?q=tesla&from=2026-02-23&sortBy=publishedAt&apiKey=4adb99b0db754b89af23f7d156d4afee"
     )
       .then((res) => res.json())
       .then((data) => {
@@ -19,8 +19,8 @@ export default function News() {
         setLoading(false);
       })
       .catch(() => {
-        setError("Error fetching news");
-        setLoading(false);
+        setError("Error");
+        setLoading(false); 
       });
   }
 
@@ -33,7 +33,6 @@ export default function News() {
 
   return (
     <div>
-      <Header />
       <h2>Latest News</h2>
 
       {news.map((item, index) => (
@@ -42,7 +41,6 @@ export default function News() {
           <p>{item.description}</p>
         </div>
       ))}
-      <Footer />
     </div>
   );
 }
