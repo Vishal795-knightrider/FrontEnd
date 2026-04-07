@@ -8,7 +8,7 @@ import Cart from './Components/Cart';
 
 export default function App() {
 
-  const [searchTerm, setSearchTerm] = useState("");
+  const [search, setSearch] = useState("");
   const [cart,setCart]=useState([]);
   const [totalAmt,setAmt]=useState(0);
   const product=[
@@ -48,13 +48,13 @@ export default function App() {
   }
 
   const filterProducts = product.filter((item) =>
-  item.name.toLowerCase().includes(searchTerm.toLowerCase())
+  item.name.toLowerCase().includes(search.toLowerCase())
 );
 
   // const totalAmount=cart.reduce((total,index)=>(total+index.price,0));
   return (
     <>
-    <Header cartCount={cart.length} searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>
+    <Header cartCount={cart.length} search={search} setSearch={setSearch}/>
     <ProductList products={filterProducts} addToCart={addToCart}/>  
     <Cart totalCost={totalAmt} cartItems={cart} removeFromCart={removeFromCart}/>
     </>

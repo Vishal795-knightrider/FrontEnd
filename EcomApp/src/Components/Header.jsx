@@ -1,4 +1,6 @@
-export default function Header({ cartCount, searchTerm, setSearchTerm }) {
+// import {UseLink} from 'react-douter-dom'
+
+export default function Header({ cartCount, search, setSearch }) {
   return (
     <div className="navbar">
 
@@ -11,8 +13,8 @@ export default function Header({ cartCount, searchTerm, setSearchTerm }) {
         type="text"
         placeholder="Search products..."
         className="search-box"
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
       />
 
       <div className="cart-info">
