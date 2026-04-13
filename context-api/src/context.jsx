@@ -1,8 +1,8 @@
 import {createContext} from 'react';
 
-//Empty Context
-const ThemeComntext =createContext();
-const UserContext=createContext();
+//Empty context
+export const ThemeContext = createContext();
+export const UserContext = createContext();
 
-// default context
-const LangContext=createContext("en");
+//Default Context
+export const LangContext = createContext("en");
