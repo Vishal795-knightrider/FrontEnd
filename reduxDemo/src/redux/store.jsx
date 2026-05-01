@@ -1,5 +1,5 @@
-import {createStore} from 'redux';
-import { todoreducer } from './reducer';
+import { createStore } from 'redux';
+import todoreducer from './reducer'; 
+// FIX: default import use kiya
 
-export const store=createStore(todoreducer);
-
+export const store = createStore(todoreducer);
