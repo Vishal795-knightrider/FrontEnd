@@ -14,6 +14,5 @@ export const deletetodo = (id) => ({
 
 export const toogle = (id) => ({
     type: TOGGLE, 
-    // FIX: toggle constant lowercase tha (गलत), TOGGLE use kiya
     payload: id
 });

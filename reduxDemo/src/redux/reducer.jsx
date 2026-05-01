@@ -31,7 +31,6 @@ export const todoreducer = (state = initialstate, action) => {
                         ? { ...todo, completed: !todo.completed }
                         : todo
                 )
-                // FIX: compeleted spelling wrong tha → completed
             };
 
         default:
@@ -40,4 +39,3 @@ export const todoreducer = (state = initialstate, action) => {
 };
 
 export default todoreducer; 
-// FIX: reducer undefined tha → todoreducer export kiya
